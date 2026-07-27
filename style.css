@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+@import 'aos/dist/aos.css';
+
+@theme {
+  --color-ink-50: #f7f8fa;
+  --color-ink-100: #eef0f4;
+  --color-ink-200: #dfe3ea;
+  --color-ink-300: #c2c9d6;
+  --color-ink-400: #94a0b5;
+  --color-ink-500: #67738c;
+  --color-ink-600: #4a5468;
+  --color-ink-700: #353d4d;
+  --color-ink-800: #222936;
+  --color-ink-900: #141923;
+  --color-ink-950: #0b0e15;
+
+  --color-accent-50: #ecfbf3;
+  --color-accent-100: #d2f5e1;
+  --color-accent-200: #a6ebc6;
+  --color-accent-300: #6bdba3;
+  --color-accent-400: #37c47e;
+  --color-accent-500: #16a863;
+  --color-accent-600: #0c864f;
+  --color-accent-700: #0a6b41;
+  --color-accent-800: #0b5436;
+  --color-accent-900: #0a452d;
+
+  --color-gold-400: #f0c14b;
+  --color-gold-500: #e0a82e;
+
+  --font-sans: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+
+  --animate-floaty: floaty 6s ease-in-out infinite;
+  --animate-blob: blob 18s ease-in-out infinite;
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  @keyframes blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -30px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.95); }
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-ink-950);
+  color: var(--color-ink-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-accent-500);
+  color: #fff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-ink-950); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-700);
+  border-radius: 999px;
+  border: 2px solid var(--color-ink-950);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-600); }
+
+/* Animated gradient text */
+.text-gradient {
+  background: linear-gradient(120deg, var(--color-accent-300), var(--color-gold-400), var(--color-accent-300));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Glass card */
+.glass {
+  background: rgba(34, 41, 54, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 160, 181, 0.12);
+}
+
+/* Nav link underline */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent-400);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Skill bar */
+.skill-bar-fill {
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Project card hover */
+.project-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Marquee for skill chips */
+.marquee {
+  display: flex;
+  gap: 1rem;
+  animation: marquee 30s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Reveal on scroll fallback */
+[data-aos] { will-change: transform, opacity; }

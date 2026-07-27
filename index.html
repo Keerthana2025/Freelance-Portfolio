@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alex Rivera — Freelance Web Developer & UI Designer. Fast, beautiful websites for small businesses." />
+    <title>Keerthana S · Freelance Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ===== Nav ===== -->
+    <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+      <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-2 font-display font-bold text-lg tracking-tight">
+          <span class="grid place-items-center w-9 h-9 rounded-lg bg-accent-500 text-ink-950 shadow-glow">
+            <i data-lucide="code-2" class="w-5 h-5"></i>
+          </span>
+          <span class="text-ink-50">Keerthana<span class="text-accent-400">.</span>S</span>
+        </a>
+
+        <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-300">
+          <li><a href="#home" class="nav-link hover:text-ink-50 transition-colors">Home</a></li>
+          <li><a href="#services" class="nav-link hover:text-ink-50 transition-colors">Services</a></li>
+          <li><a href="#work" class="nav-link hover:text-ink-50 transition-colors">Work</a></li>
+          <li><a href="#process" class="nav-link hover:text-ink-50 transition-colors">Process</a></li>
+          <li><a href="#about" class="nav-link hover:text-ink-50 transition-colors">About</a></li>
+          <li><a href="#faq" class="nav-link hover:text-ink-50 transition-colors">FAQ</a></li>
+        </ul>
+
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold text-sm px-4 py-2 transition-colors">
+            <i data-lucide="send" class="w-4 h-4"></i> Get a quote
+          </a>
+          <button id="menu-btn" class="md:hidden grid place-items-center w-10 h-10 rounded-lg glass text-ink-100" aria-label="Open menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden hidden mx-4 mb-2 rounded-2xl glass overflow-hidden">
+        <ul class="flex flex-col p-2 text-ink-200">
+          <li><a href="#home" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">Home</a></li>
+          <li><a href="#services" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">Services</a></li>
+          <li><a href="#work" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">Work</a></li>
+          <li><a href="#process" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">Process</a></li>
+          <li><a href="#about" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">About</a></li>
+          <li><a href="#faq" class="block px-4 py-3 rounded-xl hover:bg-ink-800/60">FAQ</a></li>
+          <li><a href="#contact" class="block px-4 py-3 rounded-xl bg-accent-500 text-ink-950 font-semibold mt-1">Get a quote</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== Hero ===== -->
+      <section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16">
+        <!-- background blobs -->
+        <div class="pointer-events-none absolute inset-0 -z-10">
+          <div class="absolute top-20 -left-24 w-96 h-96 rounded-full bg-accent-600/30 blur-3xl animate-blob"></div>
+          <div class="absolute bottom-0 right-0 w-md h-112 rounded-full bg-accent-800/40 blur-3xl animate-blob" style="animation-delay:-6s"></div>
+          <div class="absolute top-1/3 left-1/2 w-72 h-72 rounded-full bg-gold-500/10 blur-3xl animate-blob" style="animation-delay:-12s"></div>
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0,rgba(11,14,21,0.9)_70%)]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-12 items-center w-full">
+          <div class="lg:col-span-7" data-aos="fade-right">
+            <span class="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-sm text-accent-300 mb-6">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-400"></span>
+              </span>
+              <span id="availability"></span>
+            </span>
+
+            <h1 class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-ink-50">
+              Hi, I'm <span id="name" class="text-gradient"></span>.<br />
+              I build <span class="text-accent-400">fast</span>, <span class="text-accent-400">beautiful</span> websites.
+            </h1>
+
+            <p id="tagline" class="mt-6 text-lg text-ink-300 max-w-xl leading-relaxed"></p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#work" class="inline-flex items-center gap-2 rounded-full bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold px-6 py-3 transition-colors shadow-glow">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i> View my work
+              </a>
+              <a href="#contact" class="inline-flex items-center gap-2 rounded-full glass hover:border-accent-400/50 text-ink-100 font-semibold px-6 py-3 transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i> Let's talk
+              </a>
+            </div>
+
+            <ul id="socials" class="mt-10 flex items-center gap-3"></ul>
+          </div>
+
+          <!-- Hero visual: crafted SVG portrait card -->
+          <div class="lg:col-span-5" data-aos="fade-left" data-aos-delay="200">
+            <div class="relative mx-auto max-w-sm">
+              <div class="absolute -inset-4 rounded-3xl bg-linear-to-tr from-accent-600/40 to-gold-500/20 blur-2xl"></div>
+              <div class="relative rounded-3xl glass p-6 shadow-soft animate-floaty">
+                <!-- Avatar SVG -->
+                <div class="aspect-square rounded-2xl overflow-hidden bg-linear-to-br from-ink-700 to-ink-900 grid place-items-center">
+                  <svg viewBox="0 0 200 200" class="w-full h-full" role="img" aria-label="Illustrated portrait">
+                    <defs>
+                      <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#16a863"/>
+                        <stop offset="1" stop-color="#0a452d"/>
+                      </linearGradient>
+                      <linearGradient id="sking" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#f0c9a8"/>
+                        <stop offset="1" stop-color="#d9a47e"/>
+                      </linearGradient>
+                    </defs>
+                    <rect width="200" height="200" fill="url(#bgg)"/>
+                    <circle cx="100" cy="78" r="34" fill="url(#sking)"/>
+                    <path d="M66 74 a34 30 0 0 1 68 0 q0 -10 -34 -16 q-34 6 -34 16z" fill="#2a2018"/>
+                    <path d="M100 150 q-40 0 -56 30 h112 q-16 -30 -56 -30z" fill="#0b0e15"/>
+                    <rect x="74" y="150" width="52" height="40" rx="10" fill="#f7f8fa"/>
+                    <rect x="74" y="150" width="52" height="14" rx="10" fill="#16a863"/>
+                    <circle cx="89" cy="76" r="3" fill="#1a1a1a"/>
+                    <circle cx="111" cy="76" r="3" fill="#1a1a1a"/>
+                    <path d="M92 90 q8 6 16 0" stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div>
+                    <p id="role" class="font-display font-semibold text-ink-50"></p>
+                    <p class="text-sm text-ink-400 flex items-center gap-1 mt-1">
+                      <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                      <span id="location"></span>
+                    </p>
+                  </div>
+                  <a href="#contact" class="grid place-items-center w-10 h-10 rounded-full bg-accent-500 text-ink-950 hover:scale-110 transition-transform" aria-label="Contact me">
+                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#services" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-ink-400 hover:text-accent-400 transition-colors animate-floaty" aria-label="Scroll down">
+          <i data-lucide="chevron-down" class="w-7 h-7"></i>
+        </a>
+      </section>
+
+      <!-- ===== Stats ===== -->
+      <section class="border-y border-ink-800/60 bg-ink-900/40">
+        <div id="stats" class="max-w-7xl mx-auto px-5 sm:px-8 py-10 grid grid-cols-2 lg:grid-cols-4 gap-6"></div>
+      </section>
+
+      <!-- ===== Services ===== -->
+      <section id="services" class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="max-w-2xl" data-aos="fade-up">
+            <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">What I do</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3">Services that grow your business</h2>
+            <p class="text-ink-400 mt-4 text-lg">From first sketch to launch day, I handle the whole process so you can focus on running your business.</p>
+          </div>
+
+          <div id="services-grid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- ===== Work ===== -->
+      <section id="work" class="py-24 sm:py-32 bg-ink-900/40 border-y border-ink-800/60">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="flex flex-wrap items-end justify-between gap-6" data-aos="fade-up">
+            <div class="max-w-2xl">
+              <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">Selected work</span>
+              <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3">Recent projects</h2>
+            </div>
+            <div id="filter-bar" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <div id="projects-grid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- ===== Process ===== -->
+      <section id="process" class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="max-w-2xl" data-aos="fade-up">
+            <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">How it works</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3">A simple, transparent process</h2>
+          </div>
+          <div id="process-grid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- ===== About / Skills ===== -->
+      <section id="about" class="py-24 sm:py-32 bg-ink-900/40 border-y border-ink-800/60">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-start">
+          <div data-aos="fade-right">
+            <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">About me</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3 mb-6">A freelancer who treats your site like my own</h2>
+            <div class="space-y-4 text-ink-300 leading-relaxed">
+              <p>I'm Keerthana, a freelance developer and designer based in Austin. For the past eight years I've helped small businesses, startups, and creative studios ship websites that load fast, look sharp, and turn visitors into customers.</p>
+              <p>I work solo, so you talk directly to the person building your site — no account managers, no handoffs. You get clear timelines, honest advice, and code I'd be proud to show anyone.</p>
+              <p>When I'm not coding, you'll find me chasing the best espresso in town or on a trail with my dog, Maple.</p>
+            </div>
+            <div class="mt-8 grid grid-cols-2 gap-4 max-w-md">
+              <div class="rounded-2xl glass p-5">
+                <p class="font-display text-2xl font-bold text-accent-400">8+ yrs</p>
+                <p class="text-sm text-ink-400 mt-1">Freelance experience</p>
+              </div>
+              <div class="rounded-2xl glass p-5">
+                <p class="font-display text-2xl font-bold text-accent-400">100%</p>
+                <p class="text-sm text-ink-400 mt-1">Solo & hands-on</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left">
+            <h3 class="font-display font-semibold text-2xl text-ink-50 mb-6">Skills & tools</h3>
+            <ul id="skills-list" class="space-y-5"></ul>
+            <div class="mt-8">
+              <p class="text-sm text-ink-400 mb-3">Also working with</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Git</span>
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Vite</span>
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Figma</span>
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Supabase</span>
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Stripe</span>
+                <span class="chip rounded-full glass px-3 py-1.5 text-sm text-ink-300">Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Testimonials ===== -->
+      <section class="py-24 sm:py-32">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+          <div class="max-w-2xl" data-aos="fade-up">
+            <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">Kind words</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3">What clients say</h2>
+          </div>
+          <div id="testimonials-grid" class="mt-14 grid md:grid-cols-3 gap-6"></div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" class="py-24 sm:py-32 bg-ink-900/40 border-y border-ink-800/60">
+        <div class="max-w-3xl mx-auto px-5 sm:px-8">
+          <div data-aos="fade-up">
+            <span class="text-accent-400 font-semibold text-sm uppercase tracking-widest">Good to know</span>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50 mt-3">Frequently asked questions</h2>
+          </div>
+          <div id="faq-list" class="mt-10 divide-y divide-ink-800/60 rounded-2xl glass overflow-hidden"></div>
+        </div>
+      </section>
+
+      <!-- ===== Contact / CTA ===== -->
+      <section id="contact" class="py-24 sm:py-32">
+        <div class="max-w-5xl mx-auto px-5 sm:px-8">
+          <div class="relative rounded-3xl overflow-hidden p-8 sm:p-14 text-center" data-aos="zoom-in">
+            <div class="absolute inset-0 -z-10 bg-linear-to-br from-accent-700 via-ink-900 to-ink-950"></div>
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(22,168,99,0.4),transparent_60%)]"></div>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl text-ink-50">Let's build something great</h2>
+            <p class="text-ink-300 mt-4 max-w-xl mx-auto text-lg">Tell me about your project and I'll get back to you within one business day with next steps.</p>
+
+            <form id="contact-form" class="mt-10 max-w-xl mx-auto text-left grid sm:grid-cols-2 gap-4">
+              <div class="sm:col-span-1">
+                <label class="block text-sm text-ink-300 mb-1.5" for="cf-name">Name</label>
+                <input id="cf-name" name="name" required class="w-full rounded-xl bg-ink-950/60 border border-ink-700 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/30 outline-none px-4 py-3 text-ink-50 placeholder-ink-500 transition" placeholder="Jane Doe" />
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-sm text-ink-300 mb-1.5" for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" required class="w-full rounded-xl bg-ink-950/60 border border-ink-700 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/30 outline-none px-4 py-3 text-ink-50 placeholder-ink-500 transition" placeholder="jane@company.com" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-sm text-ink-300 mb-1.5" for="cf-msg">Project details</label>
+                <textarea id="cf-msg" name="message" rows="4" required class="w-full rounded-xl bg-ink-950/60 border border-ink-700 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/30 outline-none px-4 py-3 text-ink-50 placeholder-ink-500 transition" placeholder="What are you looking to build?"></textarea>
+              </div>
+              <div class="sm:col-span-2 flex flex-wrap items-center justify-between gap-4">
+                <p id="form-status" class="text-sm text-ink-400"></p>
+                <button type="submit" class="inline-flex items-center gap-2 rounded-full bg-accent-500 hover:bg-accent-400 text-ink-950 font-semibold px-6 py-3 transition-colors shadow-glow">
+                  <i data-lucide="send" class="w-5 h-5"></i> Send message
+                </button>
+              </div>
+            </form>
+
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-ink-300">
+              <a id="email-link" href="#" class="inline-flex items-center gap-2 hover:text-accent-300 transition-colors"><i data-lucide="mail" class="w-4 h-4"></i><span id="email-text"></span></a>
+              <a id="phone-link" href="#" class="inline-flex items-center gap-2 hover:text-accent-300 transition-colors"><i data-lucide="phone" class="w-4 h-4"></i><span id="phone-text"></span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="border-t border-ink-800/60 py-10">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-ink-400">
+        <p>&copy; <span id="year"></span> Keerthana S. Crafted with HTML, Tailwind &amp; AOS.</p>
+        <ul id="footer-socials" class="flex items-center gap-4"></ul>
+        <a href="#home" class="inline-flex items-center gap-1 hover:text-accent-300 transition-colors">Back to top <i data-lucide="arrow-up" class="w-4 h-4"></i></a>
+      </div>
+    </footer>
+
+    <!-- Back to top FAB -->
+    <button id="to-top" class="fixed bottom-6 right-6 z-50 grid place-items-center w-12 h-12 rounded-full bg-accent-500 text-ink-950 shadow-glow opacity-0 pointer-events-none transition-all duration-300 hover:bg-accent-400" aria-label="Back to top">
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
