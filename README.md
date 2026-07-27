@@ -1,4 +1,4 @@
-<img width="1920" height="1030" alt="image" src="https://github.com/user-attachments/assets/d67d8e42-95b8-42c6-8050-e4629399b52a" />**🚀 Freelance Portfolio**
+**🚀 Freelance Portfolio**
 
 A modern, responsive, and visually engaging freelance portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. This portfolio showcases my skills, projects, services, and experience while providing an easy way for clients and recruiters to connect with me.
 
