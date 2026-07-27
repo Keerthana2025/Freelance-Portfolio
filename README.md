@@ -78,7 +78,7 @@ npm run dev
 
 http://localhost:5173
 
-# 📦 Build for Production
+**📦 Build for Production**
 
 npm run build
 
@@ -126,6 +126,6 @@ Special thanks to the amazing open-source community and the creators of:
 - Framer Motion
 - Lucide React
 
-## ⭐ If you found this project helpful, don't forget to give it a star!
+# ⭐ If you found this project helpful, don't forget to give it a star!
 
 ⭐ Star this repository to support my work.
