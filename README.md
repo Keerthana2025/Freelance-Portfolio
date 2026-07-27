@@ -60,7 +60,7 @@ A modern, responsive, and visually engaging freelance portfolio built with **Rea
 
 **Clone the Repository**
 
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/keerthana2025/portfolio.git
 
 **Go into the project folder**
 
@@ -103,7 +103,7 @@ Preview production build : npm run preview
 
 Keerthana S
 
-# 🤝 Connect With Me
+**🤝 Connect With Me**
 
 If you like this project, feel free to connect with me.
 
@@ -112,11 +112,11 @@ If you like this project, feel free to connect with me.
 - 🐞 Report issues
 - 💡 Suggest new features
 
-# 📄 License
+**📄 License**
 
 This project is licensed under the MIT License.
 
-# 🙏 Acknowledgements
+**🙏 Acknowledgements**
 
 Special thanks to the amazing open-source community and the creators of:
 
