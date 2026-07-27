@@ -1,4 +1,4 @@
-**🚀 Freelance Portfolio**
+## 🚀 Freelance Portfolio
 
 A modern, responsive, and visually engaging freelance portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. This portfolio showcases my skills, projects, services, and experience while providing an easy way for clients and recruiters to connect with me.
 
